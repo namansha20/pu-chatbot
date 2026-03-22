@@ -1,5 +1,0 @@
-.env
-.venv
-node_modules
-pdf\ print/node_modules
-models/
