@@ -1,0 +1,6 @@
+fastapi
+pandas
+numpy
+streamlit
+nltk
+scikit-learn

@@ -1,0 +1,18 @@
+applications:
+- name: pu-chatbot-api
+  description: A chatbot application for answering questions based on a dataset of questions and answers.
+  path : ./srv
+  random-route: true
+  buildpacks:
+  - python_buildpack
+  memory: 512M
+  command: uvicorn app:app --host 0.0.0.0 --port $PORT
+
+- name: pu-chatbot-ui
+  description: A Streamlit application for interacting with the Poornima University Chatbot API.
+  path : ./app
+  random-route: true
+  buildpacks:
+  - python_buildpack
+  memory: 512M
+  command: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
